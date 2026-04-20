@@ -1,27 +1,47 @@
 .home-section{
   position: relative;
   margin-bottom: 80px;
-  height: 120vh;        /* control the section */
-  overflow: hidden;     /* prevents overflow issues */
-}
-
-.home-image{
-  position: absolute;   /* 🔥 key fix */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;         /* fill parent */
-  object-fit: cover;    /* behave like background */
-  z-index: -1;          /* go behind text */
+  min-height: 100vh;       /* 🔥 better than fixed vh */
+  overflow: hidden;
 }
 
 .home-info-container{
   width: 50%;
-  padding:0px 60px ;
+  padding: 0px 60px;
   margin: 0 20px;
   position: absolute;
   top: 10%;
   left: 0%;
+
+  box-sizing: border-box;
+  max-width: 100%;
+  right: 0;
+  z-index: 1;
+
+  max-height: 90vh;     /* 🔥 prevents overflow */
+  overflow-y: auto;     /* 🔥 allows scrolling if needed */
+}
+
+.home-image{
+  position: absolute;      /* 🔥 make it background */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* optional overlay for readability */
+.home-section::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 0;
 }
 
 .welcome-text{
@@ -36,14 +56,17 @@
   border-radius: 30px;
   width: 250px;
 }
+
 .star-icon{
   width: 23px;
 }
+
 h1{
-  color: rgb(6, 1, 20);
+  color: rgb(255, 255, 255);   /* 🔥 better contrast */
   font-size: 70px;
   font-weight: 800;
 }
+
 h1 span{
   color: rgb(255, 10, 92);
 }
@@ -54,13 +77,13 @@ h1 span{
   font-size: 21px;
 }
 
-
 .home-section-buttons{
   display: flex;
   align-items: center;
   gap: 15px;
   margin-top: 40px;
 }
+
 .book-whatsapp-button{
   background-color: rgb(255, 10, 92);
   padding: 17px 35px;
@@ -74,6 +97,7 @@ h1 span{
   border-radius: 15px;
   transition: all 0.3s ease;
 }
+
 .view-hairstyles-button{
   background-color: rgb(255, 255, 255);
   padding: 17px 27px;
@@ -87,50 +111,58 @@ h1 span{
   border-radius: 15px;
   transition: all 0.3s ease;
 }
+
 .book-whatsapp-button:hover{
   transform: translateY(-5px);
   background-color: rgb(184, 0, 61);
-  box-shadow:  0 4px 8px 4px rgba(255, 10, 92);
+  box-shadow: 0 4px 8px 4px rgba(255, 10, 92);
 }
+
 .view-hairstyles-button:hover{
   transform: translateY(-5px);
-  box-shadow:  0 4px 8px 4px rgb(253, 212, 226);
+  box-shadow: 0 4px 8px 4px rgb(253, 212, 226);
 }
 
+/* 📱 TABLET */
 @media (max-width: 767px){
   .welcome-text{
-
     font-size: 12px;
-    background-color: pink;
     padding: 7px 10px;
-    border-radius: 30px;
     width: 180px;
   }
+
   h1{
     font-size: 50px;
   }
+
   .home-section-description{
     font-size: 19px;
   }
+
   .home-info-container{
     width: 80%;
     padding: 0px 20px;
+
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    top: 5%;            /* 🔥 gives more space */
+    max-height: 95vh;
   }
+
   .home-section-buttons{
     flex-wrap: wrap;
   }
-  .home-image{
-    height: 100vh;
-  }
 }
+
+/* 📱 SMALL PHONES */
 @media (max-width: 418px){
   h1{
     font-size: 45px;
   }
+
   .home-section-description{
     font-size: 17px;
-  }
-  .home-image{
-    height: 100vh;
   }
 }
