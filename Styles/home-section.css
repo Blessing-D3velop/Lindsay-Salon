@@ -1,7 +1,20 @@
 .home-section{
   position: relative;
   margin-bottom: 80px;
+  height: 120vh;        /* control the section */
+  overflow: hidden;     /* prevents overflow issues */
 }
+
+.home-image{
+  position: absolute;   /* 🔥 key fix */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;         /* fill parent */
+  object-fit: cover;    /* behave like background */
+  z-index: -1;          /* go behind text */
+}
+
 .home-info-container{
   width: 50%;
   padding:0px 60px ;
@@ -10,11 +23,7 @@
   top: 10%;
   left: 0%;
 }
-.home-image{
-  width: 100%;
-  object-fit: cover;
-  height: 125dvh;
-}
+
 .welcome-text{
   display: flex;
   align-items: center;
