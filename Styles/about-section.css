@@ -1,0 +1,17 @@
+.about-section{
+padding: 0 40px;
+}  
+h2{
+  color: rgb(19, 1, 68);
+  font-size: 30px;
+  font-weight: 800;
+  width: 80%;
+}
+h2 span{
+  color: rgb(255, 10, 92);
+}
+.about-salon-description{
+  color: rgb(7, 2, 70);
+  line-height: 1.6;
+  font-weight: 500;
+}
