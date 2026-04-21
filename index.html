@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="Styles/about-section.css">
     <link rel="stylesheet" href="Styles/hairstyles-and-prices-section.css">
     <link rel="stylesheet" href="Styles/gallery.css">
+    <link rel="stylesheet" href="Styles/nail-section.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,8 +33,8 @@
         <p class="home js-home">Home</p>
         <p class="about js-about">About</p>
         <p class="gallery js-gallery">Gallery</p>
+        <p class="Beauty js-beauty">Beauty</p>        
         <p class="products js-products">Products</p>
-        <p class="Beauty js-beauty">Beauty</p>
         <p class="prices js-prices">Prices</p>
         <p class="contact js-contact">Contact</p>
 
@@ -55,8 +56,8 @@
       <p class="js-home">Home</p>
       <p class="js-about">About</p>
       <p class="js-gallery">Gallery</p>
+      <p class="js-beauty">Beauty</p>      
       <p class="js-products">Products</p>
-      <p class="js-beauty">Beauty</p>
       <p class="js-prices">Prices</p>
       <p class="js-contact">Contact</p>
 
@@ -136,7 +137,7 @@
       </section>
 
       <!-- GALLERY -->
-      <section class="gallery-section">
+      <section class="gallery-section js-gallery" id="gallery-section-id">
         <h3 class="heading">Our Angelic Gallery</h3>
 
         <p class="description">
@@ -146,6 +147,21 @@
         <div class="gallery-container js-gallery-container">
           <img src="images-icons/Images/Gallery/IMG-20260417-WA0017.jpg" alt="">
           <img src="images-icons/Images/Gallery/IMG-20260417-WA0018.jpg" alt="">
+        </div>
+      </section>
+
+
+      <!--Nails Services-->
+      <section class="nail-section js-beauty" id="nail-section-id">
+        <p class="nail-section-label">
+          <img src="images-icons/Icons/pink-stars.png" alt="stars-icon" class="pink-star-icon">
+          BEAUTY SERVICES
+        </p>
+        <h4 class="heading">Nail Services</h4>
+        <p class="description">Pamper yourself with our professional nail care services. Relax while your child gets their hair done!
+        </p>
+        <div class="nail-container js-nail-container">
+
         </div>
       </section>
 
@@ -162,6 +178,6 @@
     <!-- SCRIPTS -->
     <script src="Scripts/header.js"></script>
     <script type="module" src="Scripts/gallery.js"></script>
-
+    <script type="module" src="Scripts/nails.js"></script>
   </body>
 </html>

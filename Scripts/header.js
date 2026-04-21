@@ -29,3 +29,23 @@ document.querySelectorAll('.js-about')
       mobileMenu.classList.remove("active");
     });
   });
+
+/* GALLERY */
+document.querySelectorAll('.js-gallery')
+  .forEach(link => {
+    link.addEventListener('click', () => {
+      const gallerySection = document.getElementById('gallery-section-id');
+      gallerySection.scrollIntoView({ behavior: 'smooth' });
+      mobileMenu.classList.remove("active");
+    });
+  });
+
+/* NAILS */
+document.querySelectorAll('.js-beauty')
+  .forEach(link => {
+    link.addEventListener('click', () => {
+      const nailSection = document.getElementById('nail-section-id');
+      nailSection.scrollIntoView({ behavior: 'smooth' });
+      mobileMenu.classList.remove("active");
+    });
+  });
