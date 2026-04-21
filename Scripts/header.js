@@ -9,3 +9,23 @@ hamburger.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
   mobileMenu.classList.remove("active");
 });
+
+/* HOME */
+document.querySelectorAll('.js-home')
+  .forEach(link => {
+    link.addEventListener('click', () => {
+      const homeSection = document.getElementById('home-section-id');
+      homeSection.scrollIntoView({ behavior: 'smooth' });
+      mobileMenu.classList.remove("active");
+    });
+  });
+
+/* ABOUT */
+document.querySelectorAll('.js-about')
+  .forEach(link => {
+    link.addEventListener('click', () => {
+      const aboutSection = document.getElementById('about-section-id');
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+      mobileMenu.classList.remove("active");
+    });
+  });
