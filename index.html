@@ -2,26 +2,32 @@
 <html>
   <head>
     <title>Sky Angles Kiddies Hair Salon</title>
-    <meta name="description" content="Sky Angles Kiddies Hair Salon is a children's hair salon located in centurion. We offer a fun and safe    environment for kids to get their hair cut and styled. Our experienced stylists are trained to work with children of all ages, and we use only the best products to ensure that your child's hair is healthy and beautiful. Whether your child needs a simple trim or a complete makeover, we are here to help. Come visit us today and see why we are the best children's hair salon in town!">
+
+    <meta name="description" content="Sky Angles Kiddies Hair Salon is a children's hair salon located in centurion. We offer a fun and safe environment for kids to get their hair cut and styled.">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="children's hair salon, kids hair salon, centurion hair salon, children's haircuts, kids haircuts, children's hairstyles, kids hairstyles, fun hair salon for kids, safe hair salon for kids, experienced stylists for kids, healthy hair products for kids, sky angles kiddies hair salon, best children's hair salon in centurion">
 
     <link rel="stylesheet" href="Styles/header.css">
     <link rel="stylesheet" href="Styles/shared.css">
     <link rel="stylesheet" href="Styles/home-section.css">
     <link rel="stylesheet" href="Styles/about-section.css">
+    <link rel="stylesheet" href="Styles/hairstyles-and-prices-section.css">
+    <link rel="stylesheet" href="Styles/gallery.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   </head>
+
   <body>
+
+    <!-- HEADER -->
     <header>
       <div class="left-section">
-        <img src="Images & Icons/Images/WhatsApp Image 2026-04-18 at 20.33.47.jpeg" alt="logo-image" class="logo-image">
+        <img src="images-icons/Images/WhatsApp Image 2026-04-18 at 20.33.47.jpeg" alt="logo-image" class="logo-image">
         <p class="salon-name">Sky Angels</p>
       </div>
+
       <nav class="right-section">
         <p class="home js-home">Home</p>
         <p class="about js-about">About</p>
@@ -30,94 +36,132 @@
         <p class="Beauty js-beauty">Beauty</p>
         <p class="prices js-prices">Prices</p>
         <p class="contact js-contact">Contact</p>
+
         <button class="header-book-button js-book-button">
-          <img src="Images & Icons/Icons/icons8-speech-bubble-24.png" alt="chat-icon" class="chat-icon">  
+          <img src="images-icons/Icons/icons8-speech-bubble-24.png" alt="chat-icon" class="chat-icon">  
           Book Now
         </button>
-        <div class="hamburger"> &#9776</div>
+
+        <div class="hamburger">&#9776</div>
       </nav>
     </header>
 
-<div class="mobile-menu js-mobile-menu" id="mobileMenu">
-  <div class="mobile-header">
-    <span class="close-btn" id="closeMenu">&times;</span>
-  </div>
-
-    <p class="js-home">Home</p>
-    <p class="js-about">About</p>
-    <p class="js-gallery">Gallery</p>
-    <p class="js-products">Products</p>
-    <p class="js-beauty">Beauty</p>
-    <p class="js-prices">Prices</p>
-    <p class="js-contact">Contact</p>
-  <button class="mobile-book-btn js-book-button">Book Now</button>
-</div>
-
-<main>
-  <section class="home-section" id="home-section-id">
-    <img src="Images & Icons/Images/home-section.jpeg" alt="home-section-image" class="home-image">
-
-    <div class="home-info-container">
-      <p class="welcome-text">
-        <img src="Images & Icons/Icons/icons8-stars-50.png" alt="star-icon" class="star-icon">
-        WELCOME TO SKY ANGELS
-      </p>
-      <h1>Making Every Child feel like an <span>Angel</span>
-        <img src="Images & Icons/Icons/icons8-stars-50.png" alt="star-icon" class="star-icon-2nd">    
-      </h1>
-      <p class="home-section-description">
-        Friendly and professional hair services for kids in a fun, safe, and magical environment. Let your little ones shine!
-      </p>
-      <div class="home-section-buttons">
-        <button class="book-whatsapp-button">
-          <img src="Images & Icons/Icons/icons8-speech-bubble-24.png" alt="chat-icon" class="chatting-icon">
-          Book via WhatsApp
-        </button>
-        <button class="view-hairstyles-button">
-          <img src="Images & Icons/Icons/icons8-scissor-24.png" alt="icons8-scissor-24" class="scissors-icon">
-          View Hairstyles
-        </button>
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu js-mobile-menu" id="mobileMenu">
+      <div class="mobile-header">
+        <span class="close-btn" id="closeMenu">&times;</span>
       </div>
-    </div>
-  </section>
-  <section class="about-section" id="about-section-id">
-    <div class="about-left-section">
-      <h2>A Salon Where Kids <span>Love</span> to Be! </h2>
-      <p class="about-salon-description">Our salon is a warm, family-oriented space designed with convenience and comfort in mind. While children are getting their hair done, mothers can enjoy relaxing manicure and pedicure treatments instead of waiting idly.
 
-We offer a wide range of services including box braids, hair treatments, relaxers, freehand styles, needle plaiting, and various protective hairstyles. We also provide clean, stylish haircuts for boys, ensuring the whole family is taken care of in one place
-      </p>
-      <div class="left-section-description-container">
-        <div>
-          <img src="Images & Icons/Icons/icons8-love-30.png" alt="love-icon" class="love-icon about-icon">
-          <p>
-            We handle every child with the utmost patience and gentle touch they deserve.
-          </p>
-        </div>
-        <div>
-          <img src="Images & Icons/Icons/icons8-protection-32.png" alt="safe-icon" class="safe-icon about-icon">
-          <p>
-            A secure and child-friendly space where parents can relax while kids enjoy their session.
-          </p>
-        </div>
-        <div>
-          <img src="Images & Icons/Icons/icons8-tongue-out-48.png" alt="emoji-icon" class="emoji-icon about-icon">
-          <p>Our staff are trained specifically to work with children of all ages and temperaments.
-          </p>
-        </div>
-        <div>
-          <img src="Images & Icons/Icons/icons8-stars-50.png" alt="about-stars" class="about-stars about-icon">
-          <p>
-            Premium haircuts and styles using child-safe products for the perfect finish.
-          </p>
-        </div>
-      </div>
+      <p class="js-home">Home</p>
+      <p class="js-about">About</p>
+      <p class="js-gallery">Gallery</p>
+      <p class="js-products">Products</p>
+      <p class="js-beauty">Beauty</p>
+      <p class="js-prices">Prices</p>
+      <p class="js-contact">Contact</p>
+
+      <button class="mobile-book-btn js-book-button">Book Now</button>
     </div>
-    <div class="about-right-section">
-      <img src="Images & Icons/Images/2nd-home-section.jpeg" alt="right-section-image" class="about-right-section-image">
-    </div>
-  </section>
-</main>
+
+    <main>
+
+      <!-- HOME -->
+      <section class="home-section" id="home-section-id">
+        <img src="images-icons/Images/home-section.jpeg" alt="home-section-image" class="home-image">
+
+        <div class="home-info-container">
+          <p class="welcome-text">
+            <img src="images-icons/Icons/icons8-stars-50.png" class="star-icon">
+            WELCOME TO SKY ANGELS
+          </p>
+
+          <h1>
+            Making Every Child feel like an <span>Angel</span>
+            <img src="images-icons/Icons/icons8-stars-50.png" class="star-icon-2nd">
+          </h1>
+
+          <p class="home-section-description">
+            Friendly and professional hair services for kids in a fun, safe, and magical environment.
+          </p>
+
+          <div class="home-section-buttons">
+            <button class="book-whatsapp-button">
+              <img src="images-icons/Icons/icons8-speech-bubble-24.png" class="chatting-icon">
+              Book via WhatsApp
+            </button>
+
+            <button class="view-hairstyles-button">
+              <img src="images-icons/Icons/icons8-scissor-24.png" class="scissors-icon">
+              View Hairstyles
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="about-section" id="about-section-id">
+        <div class="about-left-section">
+          <h2>A Salon Where Kids <span>Love</span> to Be!</h2>
+
+          <p class="about-salon-description">
+            Our salon is a warm, family-oriented space designed with comfort in mind. While children get their hair done, parents can relax.
+          </p>
+
+          <div class="left-section-description-container">
+            <div>
+              <img src="images-icons/Icons/icons8-love-30.png" class="about-icon">
+              <p>We handle every child with patience and care.</p>
+            </div>
+
+            <div>
+              <img src="images-icons/Icons/icons8-protection-32.png" class="about-icon">
+              <p>A safe and child-friendly environment.</p>
+            </div>
+
+            <div>
+              <img src="images-icons/Icons/icons8-tongue-out-48.png" class="about-icon">
+              <p>Staff trained for kids of all ages.</p>
+            </div>
+
+            <div>
+              <img src="images-icons/Icons/icons8-stars-50.png" class="about-icon">
+              <p>Premium child-safe styling products.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-right-section">
+          <img src="images-icons/Images/2nd-home-section.jpeg" class="about-right-section-image">
+        </div>
+      </section>
+
+      <!-- GALLERY -->
+      <section class="gallery-section">
+        <h3 class="heading">Our Angelic Gallery</h3>
+
+        <p class="description">
+          Seeing is believing! Browse our happy clients and their styles.
+        </p>
+
+        <div class="gallery-container js-gallery-container">
+          <img src="images-icons/Images/Gallery/IMG-20260417-WA0017.jpg" alt="">
+          <img src="images-icons/Images/Gallery/IMG-20260417-WA0018.jpg" alt="">
+        </div>
+      </section>
+
+      <!-- PRICES -->
+      <section class="hairstyles-and-prices-section">
+        <h3>Hairstyles & Prices</h3>
+        <p class="hairstyles-and-prices-description">
+          Explore our complete range of professional hair services for kids
+        </p>
+      </section>
+
+    </main>
+
+    <!-- SCRIPTS -->
     <script src="Scripts/header.js"></script>
+    <script type="module" src="Scripts/gallery.js"></script>
+
   </body>
 </html>
