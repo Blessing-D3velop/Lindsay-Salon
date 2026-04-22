@@ -3,7 +3,7 @@
   padding: 30px;
 }.gallery-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 15px;
   padding: 80px 40px;
 }
@@ -39,7 +39,7 @@
 /* TABLET */
 @media (max-width: 768px) {
   .gallery-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     padding: 60px 0px;
   }
 }
@@ -47,10 +47,10 @@
 /* MOBILE */
 @media (max-width: 480px) {
   .gallery-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .gallery-image {
-    height: 200px;
+    height: 150px;
   }
 }

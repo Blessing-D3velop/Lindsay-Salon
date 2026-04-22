@@ -15,12 +15,13 @@
   width: fit-content; 
   max-width: 100%;
   white-space: nowrap;
+  font-size: 15px;
   margin: 0 auto;
-  margin-bottom: -22px;
+  margin-bottom: 22px;
 }
 
 .pink-star-icon {
-  width: 30px;
+  width: 20px;
 }
 
 h4{
@@ -31,7 +32,7 @@ h4{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
-  padding: 30px;
+  padding:  30px 10px;
 }
 
 /* CARD */
@@ -43,9 +44,14 @@ h4{
   transition: all 0.3s ease;
 }
 
+
 .nail-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+.nail-card:hover .Book-now{
+  background-color: rgb(255, 10, 92);
+  color: white;
 }
 
 /* IMAGE */
@@ -80,13 +86,13 @@ h4{
 }
 
 .nail-name {
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 700;
   color: rgb(19, 1, 68);
 }
 
 .nail-price {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 700;
   color: rgb(255, 10, 92);
 }
@@ -105,21 +111,34 @@ h4{
   padding: 10px;
   border: none;
   border-radius: 10px;
-  background-color: rgb(255, 10, 92);
-  color: white;
-  font-weight: 600;
+  background-color: pink;
+  color: rgb(255, 10, 92);
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .Book-now:hover {
-  background-color: rgb(200, 0, 70);
+  background-color: rgb(255, 10, 92);
   transform: translateY(-2px);
+}
+
+.nail-bottom-text{
+  display: flex;
+  align-items: center;
+  gap:5px;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 30px 0;
+  transition: all 0.4s ease;
+}
+.nail-bottom-text:hover{
+  color: rgb(255, 10, 92);
 }
 
 @media (max-width: 600px) {
   .js-nail-container {
     grid-template-columns: 1fr;
-    padding: 15px;
   }
 }
