@@ -1,6 +1,6 @@
 const productsData = [
   {
-    name: "Red Unicorn Hairpiece",
+    name: "Red Sparkle Braid",
     price: 60,
     shinyPrice: 65,
     stock: "in",
@@ -10,7 +10,7 @@ const productsData = [
     ]
   },
   {
-    name: "Black Unicorn Hairpiece",
+    name: "Black Sparkle Braid",
     price: 60,
     shinyPrice: 65,
     stock: "out",
@@ -20,7 +20,7 @@ const productsData = [
     ]
   },
   {
-    name: "Light Green Unicorn Hairpiece",
+    name: "Light Green Sparkle Braid",
     price: 60,
     shinyPrice: 65,
     stock: "low",
@@ -30,7 +30,7 @@ const productsData = [
     ]
   },
   {
-    name: "White Unicorn Hairpiece",
+    name: "White Sparkle Braid",
     price: 60,
     shinyPrice: 65,
     stock: "in",
@@ -81,7 +81,7 @@ let renderProducts = () => {
 
           <div class="price">
             <span class="normal">R${product.price}</span>
-            <span class="shiny">Shiny: R${product.shinyPrice}</span>
+            <span class="shiny">Sparkle: R${product.shinyPrice}</span>
           </div>
 
           <select class="quantity">
