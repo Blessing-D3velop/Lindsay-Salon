@@ -3,10 +3,12 @@
   <head>
     <title>Sky Angles Kiddies Hair Salon</title>
 
+
     <meta name="description" content="Sky Angles Kiddies Hair Salon is a children's hair salon located in centurion. We offer a fun and safe environment for kids to get their hair cut and styled.">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link rel="icon" type="image/png" sizes="32x32" href="images-icons/Images/processed_WhatsApp Image 2026-04-18 at 20.33.47.png" class="title-image">
     <link rel="stylesheet" href="Styles/header.css">
     <link rel="stylesheet" href="Styles/shared.css">
     <link rel="stylesheet" href="Styles/home-section.css">
@@ -14,6 +16,7 @@
     <link rel="stylesheet" href="Styles/hairstyles-and-prices-section.css">
     <link rel="stylesheet" href="Styles/gallery.css">
     <link rel="stylesheet" href="Styles/nail-section.css">
+    <link rel="stylesheet" href="Styles/products-section.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,7 +41,10 @@
         <p class="prices js-prices">Prices</p>
         <p class="contact js-contact">Contact</p>
 
-        <div class="cart js-cart">&#128722;</div>
+        <div class="cart-container">
+          <div class="cart js-cart">&#128722;</div>
+          <span class="cart-quantity">7</span>
+        </div>
 
         <button class="header-book-button js-book-button">
           <img src="images-icons/Icons/icons8-speech-bubble-24.png" alt="chat-icon" class="chat-icon">  
@@ -169,10 +175,19 @@
           Walk-ins welcome • Professional products • Relaxing atmosphere
         </p>
       </section>
-      <section class="products-section">
-        <p>
 
+      <section class="products-section" id="products-section-id">
+        <p class="products-section-label">
+          <img src="images-icons/Icons/icons8-shopaholic-48.png" alt="shop-icon" class="shop-icon">
+          SHOP OUR PRODUCTS
         </p>
+        <h4 class="heading">Kids Hair Products</h4>
+        <p class="description">
+          Premium hair products specially formulated for children's delicate hair. Available for purchase at our salon.
+        </p>
+                
+        <div class="product-container js-product-container"></div>
+
       </section>
 
       <!-- PRICES -->
@@ -189,5 +204,6 @@
     <script src="Scripts/header.js"></script>
     <script type="module" src="Scripts/gallery.js"></script>
     <script type="module" src="Scripts/nails.js"></script>
+    <script src="Scripts/products.js"></script>
   </body>
 </html>

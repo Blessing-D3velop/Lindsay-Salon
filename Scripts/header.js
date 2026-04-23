@@ -49,3 +49,12 @@ document.querySelectorAll('.js-beauty')
       mobileMenu.classList.remove("active");
     });
   });
+
+document.querySelectorAll('.js-products')
+  .forEach(link => {
+    link.addEventListener('click', () => {
+      const productsSection = document.getElementById('products-section-id');
+      productsSection.scrollIntoView({ behavior: 'smooth' });
+      mobileMenu.classList.remove("active");
+    });
+  });

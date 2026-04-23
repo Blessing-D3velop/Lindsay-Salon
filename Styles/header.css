@@ -156,8 +156,24 @@ nav p:hover {
 .mobile-menu {
   display: none;
 }
+.cart-container{
+  position: relative;
+  display: inline-block;
+}
+
 .cart{
-  font-size:20px;
+  font-size: 20px;
+}
+
+.cart-quantity{
+  position: absolute;
+  top: -5px;      /* 🔥 sits on top of cart */
+  right: -8px;    /* 🔥 sticks to cart corner */
+  background-color: rgb(255, 10, 92);
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 50%;
 }
 
 @media (max-width: 767px) {
