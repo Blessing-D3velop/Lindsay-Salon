@@ -3,6 +3,7 @@ const productsData = [
     name: "Red Unicorn Hairpiece",
     price: 60,
     shinyPrice: 65,
+    stock: "in",
     images: [
       "images-icons/Images/Hairpieces/red.jpg",
       "images-icons/Images/Hairpieces/red2.jpg",
@@ -12,6 +13,7 @@ const productsData = [
     name: "Black Unicorn Hairpiece",
     price: 60,
     shinyPrice: 65,
+    stock: "out",
     images: [
       "images-icons/Images/Hairpieces/black.jpg",
       "images-icons/Images/Hairpieces/black2.jpg",
@@ -21,6 +23,7 @@ const productsData = [
     name: "Light Green Unicorn Hairpiece",
     price: 60,
     shinyPrice: 65,
+    stock: "low",
     images: [
       "images-icons/Images/Hairpieces/light-green.jpg",
       "images-icons/Images/Hairpieces/light-green2.jpg",
@@ -30,12 +33,12 @@ const productsData = [
     name: "White Unicorn Hairpiece",
     price: 60,
     shinyPrice: 65,
+    stock: "in",
     images: [
       "images-icons/Images/Hairpieces/white.jpg",
       "images-icons/Images/Hairpieces/white2.jpg",
     ]
   },
-
 ];
 
 const container = document.querySelector(".js-product-container");
@@ -44,6 +47,23 @@ let renderProducts = () => {
   container.innerHTML = "";
 
   productsData.forEach((product, index) => {
+
+    let stockText = "";
+    let stockClass = "";
+    let disabledBtn = "";
+
+    if (product.stock === "in") {
+      stockText = "In Stock";
+      stockClass = "in-stock";
+    } else if (product.stock === "out") {
+      stockText = "Out of Stock";
+      stockClass = "out-stock";
+      disabledBtn = "disabled";
+    } else {
+      stockText = "Low Stock";
+      stockClass = "low-stock";
+    }
+
     let html = `
       <div class="product-card" data-index="${index}">
         <div class="image-wrapper">
@@ -56,6 +76,8 @@ let renderProducts = () => {
 
         <div class="product-info">
           <p class="product-name">${product.name}</p>
+
+          <p class="availability ${stockClass}">${stockText}</p>
 
           <div class="price">
             <span class="normal">R${product.price}</span>
@@ -70,7 +92,9 @@ let renderProducts = () => {
             <option value="5">Qty: 5</option>
           </select>
 
-          <button class="add-to-cart">Add to Cart 🛒</button>
+          <button class="add-to-cart" ${disabledBtn}>
+            ${product.stock === "out" ? "Sold Out" : "Add to Cart 🛒"}
+          </button>
         </div>
       </div>
     `;
@@ -81,6 +105,7 @@ let renderProducts = () => {
 
 renderProducts();
 
+/* IMAGE SLIDER */
 document.addEventListener("click", (e) => {
   const card = e.target.closest(".product-card");
   if (!card) return;
