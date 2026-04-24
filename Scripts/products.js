@@ -5,28 +5,28 @@ const productsData = [
     shinyPrice: 65,
     stock: "in",
     images: [
-      "images-icons/Images/Hairpieces/red.jpg",
-      "images-icons/Images/Hairpieces/red2.jpg",
+      "images-icons/Images/Hairpieces/Hred1.jpeg",
+      "images-icons/Images/Hairpieces/Hred2.jpeg",
     ]
   },
   {
     name: "Black Sparkle Braid",
     price: 60,
     shinyPrice: 65,
-    stock: "out",
+    stock: "in",
     images: [
-      "images-icons/Images/Hairpieces/black.jpg",
-      "images-icons/Images/Hairpieces/black2.jpg",
+      "images-icons/Images/Hairpieces/H1Black.jpeg",
+      "images-icons/Images/Hairpieces/Hblack2.jpeg",
     ]
   },
   {
-    name: "Light Green Sparkle Braid",
+    name: "Green Sparkle Braid",
     price: 60,
     shinyPrice: 65,
-    stock: "low",
+    stock: "in",
     images: [
-      "images-icons/Images/Hairpieces/light-green.jpg",
-      "images-icons/Images/Hairpieces/light-green2.jpg",
+      "images-icons/Images/Hairpieces/Hgreen1.jpeg",
+      "images-icons/Images/Hairpieces/Hgreen2.jpeg",
     ]
   },
   {
@@ -35,8 +35,18 @@ const productsData = [
     shinyPrice: 65,
     stock: "in",
     images: [
-      "images-icons/Images/Hairpieces/white.jpg",
-      "images-icons/Images/Hairpieces/white2.jpg",
+      "images-icons/Images/Hairpieces/Hwhite1.jpeg",
+      "images-icons/Images/Hairpieces/Hwhite2.jpeg",
+    ]
+  },
+  {
+    name: "Pink-Yellow-Blue Braid",
+    price: 60,
+    shinyPrice: 65,
+    stock: "in",
+    images: [
+      "images-icons/Images/Hairpieces/pinkyYellowBlue1.jpeg",
+      "images-icons/Images/Hairpieces/pinkyYellowBlue2.jpeg",
     ]
   },
 ];
@@ -281,4 +291,13 @@ document.querySelector(".place-order").addEventListener("click", () => {
   saveCart();
   updateCartUI();
   showAlert("Order sent ✔");
+});
+
+document.querySelector(".js-shop-now").addEventListener("click", () => {
+  const message = "Hi, I'm interested in your products. Can you help me choose?";
+  const phoneNumber = "27618602648"; // your WhatsApp number
+
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank");
 });
