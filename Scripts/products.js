@@ -126,3 +126,94 @@ document.addEventListener("click", (e) => {
   img.src = productsData[index].images[current];
   img.dataset.current = current;
 });
+
+let cart = [];
+
+// ADD TO CART
+document.addEventListener("click", (e) => {
+
+  if (e.target.classList.contains("add-to-cart")) {
+
+    const card = e.target.closest(".product-card");
+    const index = card.dataset.index;
+
+    const product = productsData[index];
+    const qty = Number(card.querySelector(".quantity").value);
+
+    const existing = cart.find(item => item.name === product.name);
+
+    if (existing) {
+      existing.qty += qty;
+    } else {
+      cart.push({
+        name: product.name,
+        price: product.price,
+        img: product.images[0],
+        qty: qty
+      });
+    }
+
+    updateCartUI();
+  }
+});
+
+const cartContainer = document.querySelector(".js-cart-items");
+const totalEl = document.querySelector(".cart-total");
+const cartQty = document.querySelector(".cart-quantity");
+
+function updateCartUI(){
+
+  cartContainer.innerHTML = "";
+  let total = 0;
+  let totalQty = 0;
+
+  cart.forEach(item => {
+
+    total += item.price * item.qty;
+    totalQty += item.qty;
+
+    cartContainer.innerHTML += `
+      <div class="cart-item">
+        <img src="${item.img}">
+        <div class="cart-item-info">
+          <p>${item.name}</p>
+          <p>R${item.price} x ${item.qty}</p>
+        </div>
+      </div>
+    `;
+  });
+
+  totalEl.innerText = `Total: R${total}`;
+  cartQty.innerText = totalQty;
+}
+
+const cartIcon = document.querySelector(".js-cart");
+const cartPanel = document.querySelector(".js-cart-panel");
+const closeCart = document.querySelector(".close-cart");
+
+cartIcon.addEventListener("click", () => {
+  cartPanel.classList.add("active");
+});
+
+closeCart.addEventListener("click", () => {
+  cartPanel.classList.remove("active");
+});
+
+document.querySelector(".place-order").addEventListener("click", () => {
+
+  if(cart.length === 0) return;
+
+  let message = "Hi, I want to place an order:\n\n";
+
+  cart.forEach(item => {
+    message += `${item.name}\nR${item.price} x ${item.qty}\n\n`;
+  });
+
+  const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+
+  message += `Total: R${total}`;
+
+  const url = `https://wa.me/27618602648?text=${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank");
+});

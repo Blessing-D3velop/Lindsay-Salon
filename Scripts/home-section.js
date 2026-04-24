@@ -14,7 +14,7 @@ document.querySelectorAll(".js-book-button")
   .forEach(btn => {
     btn.addEventListener("click", () => {
 
-      const section = document.getElementById("products-section-id");
+      const section = document.getElementById("hairstyles-section");
 
       section.scrollIntoView({
         behavior: "smooth"
