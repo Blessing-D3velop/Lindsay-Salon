@@ -128,7 +128,12 @@ h2 img{
   margin: 6px 0;
   transition: 0.3s;
 }
-
+.footer-socials a{
+  display: inline;
+}
+.footer-links a{
+  margin-bottom: 20px;
+}
 .footer-links a:hover,
 .footer-socials a:hover{
   color: #ff4da6;
@@ -146,4 +151,7 @@ h2 img{
   margin-top: 30px;
   font-size: 14px;
   color: #aaa;
+}
+.footer-icon{
+  width: 37px;
 }

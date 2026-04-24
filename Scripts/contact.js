@@ -24,15 +24,19 @@ document.querySelector(".js-send").addEventListener("click", () => {
     return;
   }
 
-  const whatsappMessage =
+  const emailMessage =
 `Hi, I want to book an appointment:
 
 Name: ${name}
 Email: ${email}
 Phone: ${phone}
-Message: ${message}`;
 
-  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+Message:
+${message}`;
 
-  window.open(url, "_blank");
+  const subject = `New Booking Request from ${name}`;
+
+  const mailtoLink = `mailto:skybeautyhaven@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailMessage)}`;
+
+  window.location.href = mailtoLink;
 });
