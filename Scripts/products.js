@@ -43,6 +43,22 @@ const productsData = [
 
 const container = document.querySelector(".js-product-container");
 
+let cart = [];
+
+/* ALERT */
+function showAlert(message){
+  const div = document.createElement("div");
+  div.className = "cart-alert";
+  div.innerText = message;
+
+  document.body.appendChild(div);
+
+  setTimeout(() => {
+    div.remove();
+  }, 1500);
+}
+
+/* RENDER PRODUCTS */
 let renderProducts = () => {
   container.innerHTML = "";
 
@@ -127,9 +143,7 @@ document.addEventListener("click", (e) => {
   img.dataset.current = current;
 });
 
-let cart = [];
-
-// ADD TO CART
+/* ADD TO CART */
 document.addEventListener("click", (e) => {
 
   if (e.target.classList.contains("add-to-cart")) {
@@ -154,16 +168,26 @@ document.addEventListener("click", (e) => {
     }
 
     updateCartUI();
+    showAlert("Added to cart ✔");
+  }
+
+  /* CLEAR CART */
+  if (e.target.classList.contains("js-clear-cart")) {
+    cart = [];
+    updateCartUI();
+    showAlert("Cart cleared 🧹");
   }
 });
 
-const cartContainer = document.querySelector(".js-cart-items");
-const totalEl = document.querySelector(".cart-total");
-const cartQty = document.querySelector(".cart-quantity");
-
+/* UPDATE CART */
 function updateCartUI(){
 
+  const cartContainer = document.querySelector(".js-cart-items");
+  const totalEl = document.querySelector(".cart-total");
+  const cartQty = document.querySelector(".cart-quantity");
+
   cartContainer.innerHTML = "";
+
   let total = 0;
   let totalQty = 0;
 
@@ -187,6 +211,7 @@ function updateCartUI(){
   cartQty.innerText = totalQty;
 }
 
+/* CART OPEN / CLOSE */
 const cartIcon = document.querySelector(".js-cart");
 const cartPanel = document.querySelector(".js-cart-panel");
 const closeCart = document.querySelector(".close-cart");
@@ -199,6 +224,7 @@ closeCart.addEventListener("click", () => {
   cartPanel.classList.remove("active");
 });
 
+/* PLACE ORDER */
 document.querySelector(".place-order").addEventListener("click", () => {
 
   if(cart.length === 0) return;
@@ -216,4 +242,9 @@ document.querySelector(".place-order").addEventListener("click", () => {
   const url = `https://wa.me/27618602648?text=${encodeURIComponent(message)}`;
 
   window.open(url, "_blank");
+
+  /* CLEAR AFTER ORDER */
+  cart = [];
+  updateCartUI();
+  showAlert("Order sent ✔");
 });

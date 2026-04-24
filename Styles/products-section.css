@@ -280,3 +280,35 @@
   border-radius: 10px;
   cursor: pointer;
 }
+.clear-cart{
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.clear-cart:hover{
+  background: rgb(50,50,50);
+}
+
+/* GREEN ALERT */
+.cart-alert{
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgb(0, 170, 70);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  z-index: 99999;
+  font-weight: 600;
+}
+.cart:hover{
+  cursor: pointer;
+}

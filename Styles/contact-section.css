@@ -1,0 +1,95 @@
+.contact-section{
+  padding: 60px 20px;
+  background: #f7f2f7;
+  text-align: center;
+}
+
+.contact-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+  margin-top: 30px;
+}
+
+/* INFO BOXES */
+.contact-info{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-box{
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.info-box h3{
+  color: #1a1a3d;
+  margin-bottom: 5px;
+}
+
+/* FORM */
+.contact-form{
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea{
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.contact-form textarea{
+  min-height: 100px;
+  resize: none;
+}
+
+/* BUTTONS */
+.send-btn{
+  background: rgb(255,10,92);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.send-btn:hover{
+  background: rgb(180,0,70);
+  transform: scale(1.03);
+}
+
+.whatsapp-btn{
+  background: #25D366;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.or{
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+/* MOBILE */
+@media (max-width: 768px){
+  .contact-grid{
+    grid-template-columns: 1fr;
+  }
+}

@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="Styles/gallery.css">
     <link rel="stylesheet" href="Styles/nail-section.css">
     <link rel="stylesheet" href="Styles/products-section.css">
+    <link rel="stylesheet" href="Styles/contact-section.css">
+    <link rel="stylesheet" href="Styles/work-section.css">
+    <link rel="stylesheet" href="Styles/footer.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,7 +46,7 @@
 
         <div class="cart-container">
           <div class="cart js-cart">&#128722;</div>
-          <span class="cart-quantity">7</span>
+          <span class="cart-quantity">0</span>
         </div>
 
         <button class="header-book-button js-book-button">
@@ -246,24 +249,156 @@
         <div class="hairstyles-grid js-hairstyles-grid"></div>
       </section>
 
+      <section class="workplace-section">
+        <h2 class="heading">Our Salon Workspace</h2>
+        <p class="description">Take a look inside our clean, fun and professional environment</p>
+
+        <div class="workplace-grid js-workplace-grid">
+          <img src="images-icons/Images/Work Place/IMG-20260417-WA0003.jpg" class="work-image" alt="">
+          <img src="images-icons/Images/Work Place/IMG-20260417-WA0004.jpg" class="work-image" alt="">
+          <img src="images-icons/Images/Work Place/IMG-20260417-WA0005.jpg" class="work-image" alt="">
+          <img src="images-icons/Images/Work Place/IMG-20260417-WA0006.jpg" class="work-image" alt="">
+          <img src="images-icons/Images/Work Place/IMG-20260417-WA0007.jpg" class="work-image" alt="">
+          <img src="images-icons/Images/Work Place/IMG-20260417-WA0008.jpg" class="work-image" alt="">
+        </div>
+      </section>
+
+      <!-- IMAGE MODAL -->
+      <div class="image-modal js-image-modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-image">
+      </div>
+
+      <section class="contact-section" id="contact">
+
+        <h2 class="heading">Get in Touch</h2>
+
+        <p class="description">
+          Have questions or want to book an appointment? We're here to help!
+          Reach out via the form, WhatsApp, or visit us at our salon.
+        </p>
+
+        <div class="contact-grid">
+
+          <!-- CONTACT INFO -->
+          <div class="contact-info">
+
+            <div class="info-box">
+              <h3>📞 Call Us</h3>
+              <p>061 860 2648</p>
+            </div>
+
+            <div class="info-box">
+              <h3>📍 Our Location</h3>
+              <p>Corner Lyttelton 180, Havard Ave, Clubview, Centurion, 0122</p>
+            </div>
+
+            <div class="info-box">
+              <h3>⏰ Business Hours</h3>
+              <p>Mon - Fri: 9:00 AM - 5:00 PM</p>
+              <p>Sat: 8:30 AM - 3:00 PM</p>
+              <p>Sun: Closed</p>
+            </div>
+            
+
+          </div>
+
+          <!-- FORM -->
+          <div class="contact-form">
+
+            <h3>Send us a Message</h3>
+
+            <input type="text" class="js-name" placeholder="Your Name">
+            <input type="email" class="js-email" placeholder="Email Address">
+            <input type="tel" class="js-phone" placeholder="Phone Number">
+
+            <textarea class="js-message" placeholder="Tell us about the style you want..."></textarea>
+
+            <button class="send-btn js-send">Book Appointment</button>
+
+            <p class="or">OR</p>
+
+            <button class="whatsapp-btn js-whatsapp">
+              WhatsApp Us Directly
+            </button>
+
+          </div>
+
+        </div>
+
+      </section>
+
     </main>
     <div class="image-modal js-image-modal">
       <span class="close-modal">&times;</span>
      <img class="modal-image">
     </div>
-<div class="cart-panel js-cart-panel">
-  <div class="cart-header">
-    <h3>Your Cart</h3>
-    <span class="close-cart">&times;</span>
+
+    <div class="cart-panel js-cart-panel">
+      <div class="cart-header">
+        <h3>Your Cart</h3>
+        <span class="close-cart">&times;</span>
+      </div>
+
+      <div class="cart-items js-cart-items"></div>
+
+      <div class="cart-footer">
+        <p class="cart-total">Total: R0</p>
+        <button class="place-order">Place Order (WhatsApp)</button>
+        <button class="clear-cart js-clear-cart">Clear Cart</button>
+      </div>
+    </div>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+
+      <h2>
+        <img src="images-icons/Images/WhatsApp Image 2026-04-18 at 20.33.47.jpeg" alt="logo-image" >
+        Sky Angels Kiddies Salon</h2>
+      <p>
+        Centurion's premium hair destination for kids. We make every child feel special with professional care and a playful atmosphere.
+      </p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <a href="#home-section-id">Home</a>
+      <a href="#about-section-id">About</a>
+      <a href="#gallery-section-id">Gallery</a>
+      <a href="#hairstyles-section">Hair Styles</a>
+      <a href="#products-section-id">Products</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>📞 061 860 2648</p>
+      <p>📍 Corner Lyttelton 180, Havard Ave, Clubview, Centurion, 0122</p>
+      <p>✉️ hello@skyangels.co.za</p>
+    </div>
+
   </div>
 
-  <div class="cart-items js-cart-items"></div>
-
-  <div class="cart-footer">
-    <p class="cart-total">Total: R0</p>
-    <button class="place-order">Place Order (WhatsApp)</button>
+  <!-- GOOGLE MAP -->
+  <div class="footer-map">
+    <iframe 
+      src="https://www.google.com/maps?q=Corner%20Lyttelton%20180%20Havard%20Ave%20Clubview%20Centurion&output=embed"
+      loading="lazy">
+    </iframe>
   </div>
-</div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>© 2026 Sky Angels Kiddies Hair Salon. All rights reserved.</p>
+    <p>Made with ❤️ for little angels.</p>
+  </div>
+</footer>
+
     <!-- SCRIPTS -->
     <script src="Scripts/header.js"></script>
     <script type="module" src="Scripts/gallery.js"></script>
@@ -271,6 +406,8 @@
     <script src="Scripts/products.js"></script>
     <script type="module" src="Scripts/haistyles.js"></script>
     <script src="Scripts/home-section.js"></script>
+    <script src="Scripts/contact.js"></script>
+    <script src="Scripts/work.js"></script>
 
 
   </body>
