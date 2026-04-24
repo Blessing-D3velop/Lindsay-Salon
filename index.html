@@ -93,12 +93,12 @@
           </p>
 
           <div class="home-section-buttons">
-            <button class="book-whatsapp-button">
+            <button class="book-whatsapp-button js-book-button">
               <img src="images-icons/Icons/icons8-speech-bubble-24.png" class="chatting-icon">
               Book via WhatsApp
             </button>
 
-            <button class="view-hairstyles-button">
+            <button class="view-hairstyles-button js-view-hairstyles-button">
               <img src="images-icons/Icons/icons8-scissor-24.png" class="scissors-icon">
               View Hairstyles
             </button>
@@ -176,6 +176,7 @@
         </p>
       </section>
 
+      <!-- PRODUCTS -->
       <section class="products-section" id="products-section-id">
         <p class="products-section-label">
           <img src="images-icons/Icons/icons8-shopaholic-48.png" alt="shop-icon" class="shop-icon">
@@ -187,23 +188,77 @@
         </p>
                 
         <div class="product-container js-product-container"></div>
-
+        <div class="bottom-container">
+          <p class="heading">Can't Find What You Need?</p>
+          <p class="description">Message us and we'll source the perfect unicorn product for your child's magical hair!</p>
+        <button class="button-shop-now">
+          <img src="images-icons/Icons/icons8-shopaholic-48.png" alt="shop-icon" class="shop-icon">
+          SHOP OUR PRODUCTS
+        </button>
+        </div>
       </section>
 
-      <!-- PRICES -->
-      <section class="hairstyles-and-prices-section">
-        <h3>Hairstyles & Prices</h3>
-        <p class="hairstyles-and-prices-description">
-          Explore our complete range of professional hair services for kids
-        </p>
+      <!--Hairstyles & Prices-->
+      <section class="hairstyles" id="hairstyles-section">
+        <h5 class="heading">Hairstyles & Prices</h5>
+        <p class="description">Explore our complete range of professional hair services</p>
+        <div class="category-container">
+          <button>
+            <img src="images-icons/Icons/icons8-stars-50.png" alt="stars-icon" class="button-icon">
+            Needle Styles
+          </button>
+
+          <button>
+            <img src="images-icons/Icons/icons8-art-48.png" alt="art-icon" class="button-icon">
+            Freehand Styles
+          </button>
+
+          <button>
+            <img src="images-icons/Icons/icons8-star-of-bethlehem-48.png" alt="star-icon" class="button-icon">
+            Box Braids
+          </button>
+
+          <button>
+            <img src="images-icons/Icons/icons8-crown-48.png" alt="crown-icon" class="button-icon">
+            Tribal Braids
+          </button>
+
+          <button>
+            <img src="images-icons/Icons/icon-cornrows-stars.png" alt="cornrows-icon" class="button-icon">
+            Cornrows
+          </button>
+
+          <button>
+            <img src="images-icons/Icons/icons8-bow-tie-50.png" alt="bow-tie-icon" class="button-icon">
+            Piggy Tails
+          </button>
+
+          <button>
+            <img src="images-icons/Icons/icons8-protection-32.png" alt="protections-icon" class="button-icon">
+            Protective Styles
+          </button>
+
+          <button>
+            <img src="images-icons/Icons/icons8-hair-care-48.png" alt="hair-care" class="button-icon">
+            Hair Care
+          </button>
+        </div>
+        <div class="hairstyles-grid js-hairstyles-grid"></div>
       </section>
 
     </main>
-
+    <div class="image-modal js-image-modal">
+      <span class="close-modal">&times;</span>
+     <img class="modal-image">
+    </div>
     <!-- SCRIPTS -->
     <script src="Scripts/header.js"></script>
     <script type="module" src="Scripts/gallery.js"></script>
     <script type="module" src="Scripts/nails.js"></script>
     <script src="Scripts/products.js"></script>
+    <script type="module" src="Scripts/haistyles.js"></script>
+    <script src="Scripts/home-section.js"></script>
+
+
   </body>
 </html>

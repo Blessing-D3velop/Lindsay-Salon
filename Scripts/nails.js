@@ -26,3 +26,21 @@ let renderNails = (nailsData) =>{
   })
 }
 renderNails(nailsData)
+
+document.addEventListener("click", (e) => {
+
+  if (e.target.classList.contains("Book-now")) {
+
+    const card = e.target.closest(".nail-card");
+
+    const name = card.querySelector(".nail-name").innerText;
+    const price = card.querySelector(".nail-price").innerText;
+
+    const message = `Hi, I would like to book a nail service:\n\n${name}\nPrice: ${price}`;
+
+    const whatsappURL = `https://wa.me/27618602648?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappURL, "_blank");
+  }
+
+});

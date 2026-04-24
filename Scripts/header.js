@@ -58,3 +58,12 @@ document.querySelectorAll('.js-products')
       mobileMenu.classList.remove("active");
     });
   });
+
+document.querySelectorAll('.js-prices')
+  .forEach(link => {
+    link.addEventListener('click', () => {
+      const priceSection = document.getElementById('hairstyles-section');
+      priceSection.scrollIntoView({ behavior: 'smooth' });
+      mobileMenu.classList.remove("active");
+    });
+  });

@@ -1,0 +1,131 @@
+.hairstyles-container{
+  
+}
+.category-container{
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  overflow-x: auto;
+  white-space: nowrap;
+
+  -webkit-overflow-scrolling: touch;
+
+  padding: 15px 20px;
+
+  box-sizing: border-box;
+  width: 100%;
+}
+
+
+
+/* hide scrollbar (optional clean look) */
+.category-container::-webkit-scrollbar{
+
+}
+
+.category-container button{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+
+  background-color: rgb(231, 197, 231);
+  color: rgb(116, 10, 255);
+
+  border: none;
+  border-radius: 25px;
+
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  white-space: nowrap;
+}
+
+.category-container button:hover{
+  transform: translateY(-3px);
+  background-color: rgb(255, 210, 240);
+}
+
+.button-icon{
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+@media (max-width: 900px){
+  .category-container{
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 767px){
+  .category-container{
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+.hairstyles-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 767px){
+  .hairstyles-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CARD */
+.style-card{
+  background: rgba(255, 192, 203, 0.12);
+  padding: 18px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.style-card:hover{
+  transform: translateY(-5px);
+}
+
+/* TEXT */
+.style-name{
+  color: rgb(20,20,50);
+  font-weight: 600;
+}
+
+.style-price{
+  color: rgb(255, 10, 92);
+  font-weight: bold;
+  margin: 10px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 8px;
+}
+
+/* BUTTON */
+.book-btn{
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: rgb(255, 10, 92);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.book-btn:hover{
+  transform: scale(1.05);
+  background: rgb(184,0,61);
+  box-shadow: 0 8px 20px rgba(255, 10, 92, 0.4);
+}

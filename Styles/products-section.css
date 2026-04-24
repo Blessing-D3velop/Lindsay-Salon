@@ -14,6 +14,7 @@
   white-space: nowrap;
   font-size: 15px;
   margin: 0 auto;
+  border: none;
 }
 
 .shop-icon {
@@ -173,4 +174,41 @@
   cursor: not-allowed;
   transform: none;
   opacity: 0.6;
+}
+
+.bottom-shop-icon{
+  display: flex;
+  justify-content: center;
+}
+.button-shop-now{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 5px;
+  font-weight: 700;
+  background-color: rgb(231, 197, 231);
+  color: rgb(116, 10, 255);
+  padding: 6px 14px;
+  border-radius: 20px;
+  width: fit-content; 
+  max-width: 100%;
+  border: none;
+  transition: all 0.3s ease;
+}
+.button-shop-now:hover{
+  background-color: blueviolet;
+  color: white;
+  transform: scale(1.05);
+}
+
+.bottom-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  background-color: #f5f0f0;
+  padding: 30px;
+  margin: 0 40px;
+  border-radius: 20px;
 }
