@@ -67,3 +67,12 @@ document.querySelectorAll('.js-prices')
       mobileMenu.classList.remove("active");
     });
   });
+
+  document.querySelectorAll('.js-contact')
+  .forEach(link => {
+    link.addEventListener('click', () => {
+      const contactSection = document.getElementById('contact');
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+      mobileMenu.classList.remove("active");
+    });
+  });
