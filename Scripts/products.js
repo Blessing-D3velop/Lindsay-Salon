@@ -43,7 +43,15 @@ const productsData = [
 
 const container = document.querySelector(".js-product-container");
 
-let cart = [];
+/* ===================== */
+/* CART (LOCAL STORAGE)  */
+/* ===================== */
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function saveCart(){
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
 
 /* ALERT */
 function showAlert(message){
@@ -58,7 +66,10 @@ function showAlert(message){
   }, 1500);
 }
 
-/* RENDER PRODUCTS */
+/* ===================== */
+/* RENDER PRODUCTS       */
+/* ===================== */
+
 let renderProducts = () => {
   container.innerHTML = "";
 
@@ -121,7 +132,10 @@ let renderProducts = () => {
 
 renderProducts();
 
-/* IMAGE SLIDER */
+/* ===================== */
+/* IMAGE SLIDER          */
+/* ===================== */
+
 document.addEventListener("click", (e) => {
   const card = e.target.closest(".product-card");
   if (!card) return;
@@ -143,7 +157,10 @@ document.addEventListener("click", (e) => {
   img.dataset.current = current;
 });
 
-/* ADD TO CART */
+/* ===================== */
+/* ADD TO CART           */
+/* ===================== */
+
 document.addEventListener("click", (e) => {
 
   if (e.target.classList.contains("add-to-cart")) {
@@ -167,6 +184,7 @@ document.addEventListener("click", (e) => {
       });
     }
 
+    saveCart();
     updateCartUI();
     showAlert("Added to cart ✔");
   }
@@ -174,12 +192,16 @@ document.addEventListener("click", (e) => {
   /* CLEAR CART */
   if (e.target.classList.contains("js-clear-cart")) {
     cart = [];
+    saveCart();
     updateCartUI();
     showAlert("Cart cleared 🧹");
   }
 });
 
-/* UPDATE CART */
+/* ===================== */
+/* UPDATE CART UI        */
+/* ===================== */
+
 function updateCartUI(){
 
   const cartContainer = document.querySelector(".js-cart-items");
@@ -209,9 +231,17 @@ function updateCartUI(){
 
   totalEl.innerText = `Total: R${total}`;
   cartQty.innerText = totalQty;
+
+  saveCart();
 }
 
-/* CART OPEN / CLOSE */
+/* INIT CART UI ON LOAD */
+updateCartUI();
+
+/* ===================== */
+/* CART OPEN / CLOSE     */
+/* ===================== */
+
 const cartIcon = document.querySelector(".js-cart");
 const cartPanel = document.querySelector(".js-cart-panel");
 const closeCart = document.querySelector(".close-cart");
@@ -224,7 +254,10 @@ closeCart.addEventListener("click", () => {
   cartPanel.classList.remove("active");
 });
 
-/* PLACE ORDER */
+/* ===================== */
+/* PLACE ORDER           */
+/* ===================== */
+
 document.querySelector(".place-order").addEventListener("click", () => {
 
   if(cart.length === 0) return;
@@ -245,6 +278,7 @@ document.querySelector(".place-order").addEventListener("click", () => {
 
   /* CLEAR AFTER ORDER */
   cart = [];
+  saveCart();
   updateCartUI();
   showAlert("Order sent ✔");
 });
