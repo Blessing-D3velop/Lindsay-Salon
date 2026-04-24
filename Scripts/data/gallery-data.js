@@ -10,5 +10,7 @@ export const galleryData = [
   { img:'images-icons/Images/Gallery/IMG-20260417-WA0025.jpg' },
   { img:'images-icons/Images/Gallery/IMG-20260417-WA0026.jpg' },
   { img:'images-icons/Images/Gallery/IMG-20260420-WA0047.jpg' },
-  { img:'images-icons/Images/Gallery/IMG-20260420-WA0064.jpg' }
+  { img:'images-icons/Images/Gallery/IMG-20260420-WA0064.jpg' },
+  { img:'images-icons/Images/Gallery/N1.jpeg' },
+  { img:'images-icons/Images/Gallery/N2.jpeg'}
 ];
