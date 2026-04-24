@@ -39,7 +39,7 @@ export const hairstylesData = [
   { name: "Bantu knots", price: "R285 - R310", category: "protective" },
 
   // HAIR CARE
-  { name: "Wash & Detangle", price: "R120", category: "care" },
+  { name: "Wash & Detangle", price: "R85", category: "care" },
   { name: "Wash + Blow", price: "R200", category: "care" },
-  { name: "Relaxer", price: "R255 - R300", category: "care" }
+  { name: "Relaxer", price: "R220 - R300", category: "care" }
 ];
