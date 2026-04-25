@@ -40,13 +40,28 @@ const productsData = [
     ]
   },
   {
-    name: "Pink-Yellow-Blue Braid",
+    name: "Pink-Yellow-Blue Braids",
     price: 60,
     shinyPrice: 65,
     stock: "in",
     images: [
       "images-icons/Images/Hairpieces/pinkyYellowBlue1.jpeg",
       "images-icons/Images/Hairpieces/pinkyYellowBlue2.jpeg",
+    ]
+  },
+  {
+    name: "Mixed Colors Braids",
+    price: 60,
+    shinyPrice: 65,
+    stock: "in",
+    images: [
+      "images-icons/Images/Hairpieces/mix1.jpeg",
+      "images-icons/Images/Hairpieces/mix2.jpeg",
+      "images-icons/Images/Hairpieces/mix3.jpeg",
+      "images-icons/Images/Hairpieces/mix4.jpeg",
+      "images-icons/Images/Hairpieces/mix5.jpeg",
+      "images-icons/Images/Hairpieces/mix7.jpeg",
+      "images-icons/Images/Hairpieces/mix8.jpeg",
     ]
   },
 ];
