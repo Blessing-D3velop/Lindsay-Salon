@@ -1,57 +1,62 @@
 const productsData = [
   {
     name: "Red Sparkle Braid",
-    price: 60,
+    price: 65,
     shinyPrice: 65,
     stock: "in",
     images: [
       "images-icons/Images/Hairpieces/Hred1.jpeg",
       "images-icons/Images/Hairpieces/Hred2.jpeg",
+       "images-icons/Images/Hairpieces/Hred3.jpeg",
     ]
   },
   {
     name: "Black Sparkle Braid",
-    price: 60,
+    price: 65,
     shinyPrice: 65,
     stock: "in",
     images: [
       "images-icons/Images/Hairpieces/H1Black.jpeg",
       "images-icons/Images/Hairpieces/Hblack2.jpeg",
+      "images-icons/Images/Hairpieces/Hblack3.jpeg",
     ]
   },
   {
     name: "Green Sparkle Braid",
-    price: 60,
+    price: 65,
     shinyPrice: 65,
     stock: "in",
     images: [
       "images-icons/Images/Hairpieces/Hgreen1.jpeg",
       "images-icons/Images/Hairpieces/Hgreen2.jpeg",
+       "images-icons/Images/Hairpieces/Hgreen3.jpeg",
     ]
   },
   {
     name: "White Sparkle Braid",
-    price: 60,
+    price: 65,
     shinyPrice: 65,
     stock: "in",
     images: [
       "images-icons/Images/Hairpieces/Hwhite1.jpeg",
       "images-icons/Images/Hairpieces/Hwhite2.jpeg",
+      "images-icons/Images/Hairpieces/Hwhite3.jpeg",
     ]
   },
   {
     name: "Pink-Yellow-Blue Braids",
-    price: 60,
+    price: 65,
     shinyPrice: 65,
     stock: "in",
     images: [
       "images-icons/Images/Hairpieces/pinkyYellowBlue1.jpeg",
       "images-icons/Images/Hairpieces/pinkyYellowBlue2.jpeg",
+      "images-icons/Images/Hairpieces/pinkyYellowBlue3.jpeg",
     ]
   },
   {
     name: "Mixed Colors Braids",
-    price: 60,
+    price: 65,
     shinyPrice: 65,
     stock: "in",
     images: [
@@ -133,7 +138,6 @@ let renderProducts = () => {
 
           <div class="price">
             <span class="normal">R${product.price}</span>
-            <span class="shiny">Sparkle: R${product.shinyPrice}</span>
           </div>
 
           <select class="quantity">
