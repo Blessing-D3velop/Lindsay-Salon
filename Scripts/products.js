@@ -85,6 +85,15 @@ const productsData = [
       "images-icons/Images/Hairpieces/Hblue2.jpeg"
     ]
   },
+  {
+    name: "Light Green sparkle Braid",
+    price: 60,
+    shinyPrice: 65,
+    stock: "in",
+    images: [
+      "images-icons/Images/Hairpieces/HlightGreen1.jpeg"
+    ]
+  },
 
 ];
 
