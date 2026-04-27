@@ -17,7 +17,6 @@ const productsData = [
     stock: "in",
     images: [
       "images-icons/Images/Hairpieces/H1Black.jpeg",
-      "images-icons/Images/Hairpieces/Hblack2.jpeg",
       "images-icons/Images/Hairpieces/Hblack3.jpeg",
     ]
   },
@@ -39,7 +38,6 @@ const productsData = [
     stock: "in",
     images: [
       "images-icons/Images/Hairpieces/Hwhite1.jpeg",
-      "images-icons/Images/Hairpieces/Hwhite2.jpeg",
       "images-icons/Images/Hairpieces/Hwhite3.jpeg",
     ]
   },
@@ -56,7 +54,7 @@ const productsData = [
   },
   {
     name: "Mixed Colors Braids",
-    price: 65,
+    price: 60,
     shinyPrice: 65,
     stock: "in",
     images: [
@@ -69,6 +67,25 @@ const productsData = [
       "images-icons/Images/Hairpieces/mix8.jpeg",
     ]
   },
+  {
+    name: "Orange sparkle Braid",
+    price: 60,
+    shinyPrice: 65,
+    stock: "in",
+    images: [
+      "images-icons/Images/Hairpieces/Horange1.jepg.jpeg"
+    ]
+  },
+  {
+    name: "Blue sparkle Braid",
+    price: 60,
+    shinyPrice: 65,
+    stock: "in",
+    images: [
+      "images-icons/Images/Hairpieces/Hblue2.jpeg"
+    ]
+  },
+
 ];
 
 const container = document.querySelector(".js-product-container");
