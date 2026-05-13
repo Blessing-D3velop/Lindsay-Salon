@@ -69,7 +69,7 @@ const productsData = [
   },
   {
     name: "Orange sparkle Braid",
-    price: 60,
+    price: 65,
     shinyPrice: 65,
     stock: "in",
     images: [
@@ -78,7 +78,7 @@ const productsData = [
   },
   {
     name: "Blue sparkle Braid",
-    price: 60,
+    price: 65,
     shinyPrice: 65,
     stock: "in",
     images: [
@@ -87,7 +87,7 @@ const productsData = [
   },
   {
     name: "Light Green sparkle Braid",
-    price: 60,
+    price: 65,
     shinyPrice: 65,
     stock: "in",
     images: [
